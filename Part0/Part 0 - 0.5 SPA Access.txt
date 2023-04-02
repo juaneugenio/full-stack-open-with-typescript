@@ -1,0 +1,25 @@
+link: https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUGFydCAwIC0gMC41IFNQQSBBY2Nlc3MKCmJyb3dzZXItPnNlcnZlcjogSFRUUCBHRVQgaHR0cHM6Ly9zdHVkaWVzLmNzLmhlbHNpbmtpLmZpL2V4YW1wbGVhcHAvc3BhCgA5Bi0tPgBKBzogUmVzcG9uc2Ugd2l0aCBIVE1MLWNvZGUALUVtYWluLmNzcwBWIQAhCCBhbmQgcHJpbnQgc3R5bGVzAIExSC5qAHEUcgCBdAgAASEgaW5zdGFsbEhvb2suanMKCm5vdGUgb3ZlciAAgkIIAIMcCCBzdGFydHMgZXhlY3V0aW5nAFcHIAphbmQAOQ8gAIJmBWVuZCBub3RlAIMhRmRhdGEuanNvbgCDWhNbeyJjb250ZW50IjoiIiwiZGF0ZSI6IjIwMjMtMDQtMDJUMDY6MDE6MDMuMTcxWiJ9LCAuLi5dAIFSHQCBYgZlcyB0aGUgZXZlbnQgaGFuZGxlcgp0aGF0IHJlbmRlcnMAgV0FcyB0byBkaXNwbGF5AIFuCQ&s=default
+
+
+title Part 0 - 0.5 SPA Access
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: Response with HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: Response with main.css and print styles
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: response spa.js
+server-->browser: response installHook.js
+
+note over browser:
+browser starts executing spa.js 
+and installHook.js code
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"","date":"2023-04-02T06:01:03.171Z"}, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note

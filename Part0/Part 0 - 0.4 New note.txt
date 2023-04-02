@@ -1,0 +1,29 @@
+link: https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUGFydCAwIC0gMC40IE5ldyBub3RlCmJyb3dzZXItPnNlcnZlcjogSFRUUCBQT1NUIGh0dHBzOi8vc3R1ZGllcy5jcy5oZWxzaW5raS5maS9leGFtcGxlYXBwL25ld18ASQVub3RlIG92ZXIgAEgHCgBRBiBjcmVhdGUAbgUgYW5kIHJlZGlyZWN0cyAKYmFjayB0byBwYWdlICJodG1sIC9ub3RlcyIKZW5kAIEKHEdFAHgtb3RlcwCBCQctLT4AgXIHOiBSZXNwb25zZSB3aXRoIEhUTUwtY29kAC5GbWFpbi5jcwBVIgAhCACCGAVwcmludCBzdHlsZXMAPUpqAIFpFHIAgXUIAAEiIGluc3RhbGxIb29rLmpzCgCDYgsAgkQIAIRGCCBzdGFydHMgZXhlY3V0aW5nAFcIIAphbmQAOg8gAIJpBQCDYgkAgydFZGF0YS5qc29uAINdE1t7ImNvbnRlbnQiOiIiLCJkYXRlIjoiMjAyMy0wNC0wMlQwNjowMTowMy4xNzFaIn0sIC4uLl0AgVMdAIFjBmVzIHRoZSBldmVudCBoYW5kbGVyCnRoYXQgcmVuZGVycwCGbgVzIHRvIGRpc3BsYXkAhVkJ&s=default
+
+
+title Part 0 - 0.4 New note
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+note over server:
+server create note and redirects 
+back to page "html /notes"
+end note
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: Response with HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: Response with main.css and print styles
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: response main.js
+server-->browser: response installHook.js
+
+note over browser:
+browser starts executing main.js 
+and installHook.js code
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"","date":"2023-04-02T06:01:03.171Z"}, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note

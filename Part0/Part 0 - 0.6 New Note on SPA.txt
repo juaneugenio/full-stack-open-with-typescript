@@ -1,0 +1,12 @@
+link: https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUGFydCAwIC0gMC42IE5ldyBOb3RlIG9uIFNQQQpuAAcFdmVyIGJyb3dzZXI6ClNQQSBhcHAgbWFrZSBqdXN0IG9uZSBQT1NUCnJlcXVlc3Qgc3VibWl0dGluZyB0aGUgZm9ybQoKZW5kIG5vdGUKCgBEBy0-c2VydmVyOiBIVFRQAD0FIGh0dHBzOi8vc3R1ZGllcy5jcy5oZWxzaW5raS5maS9leGFtcGxlYXBwL25ld19ub3RlX3NwYQoAQwYtLT4AgR4IIEluAHYFUmVzcG9uc2Ugd2UgZm91bmQgeyJtZXNzYWdlIjoiAIFZBWNyZWF0ZWQifQo&s=default
+
+
+title Part 0 - 0.6 New Note on SPA
+note over browser:
+SPA app make just one POST
+request submitting the form
+
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: In the Response we found {"message":"note created"}
